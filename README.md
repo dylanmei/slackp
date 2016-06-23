@@ -21,11 +21,11 @@ Pull the [Docker image](https://hub.docker.com/r/dylanmei/slackp) and run.
 
 ```
 docker pull dylanmei/slackp
-docker run --rm dylanmei/slackp -help
+docker run --rm dylanmei/slackp slackp -help
 docker run --rm \
   -e "SLACKP_URL=https://hooks.slack.com/services/blah/blah/blah" \
   -e "SLACKP_CHANNEL=#slack-tests" \
   -e "SLACKP_USER=SlackP" \
   -e "SLACKP_ICON=:golang:" \
-  dylanmei/slackp "hello from slackp!"
+  dylanmei/slackp slackp "hello from slackp!"
 ```
