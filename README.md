@@ -1,7 +1,7 @@
 slackp
 ------
 
-Send a [message to a Slack Webhook](https://api.slack.com/incoming-webhooks#sending_messages). Useful for a CI system, maybe.
+Post a [message to a Slack incoming webhook](https://api.slack.com/incoming-webhooks#sending_messages). Useful for a CI system, maybe.
 
 # examples
 
