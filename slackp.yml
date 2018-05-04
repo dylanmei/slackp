@@ -1,0 +1,10 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+  network: "func_functions"
+
+functions:
+  slackp:
+    image: dylanmei/faas-slackp
+    environment_file:
+    - env.yml
