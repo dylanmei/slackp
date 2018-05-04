@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"strings"
 
@@ -22,12 +23,19 @@ func main() {
 	}
 	flag.Parse()
 
+	var text string
 	args := flag.Args()
+
 	if len(args) > 0 {
-		message.Text = strings.Join(args, " ")
+		text = strings.Join(args, " ")
+	} else {
+		stdin, _ := ioutil.ReadAll(os.Stdin)
+		text = string(stdin)
 	}
 
+	message.Text = text
 	err := client.SendMessage(&message)
+
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
